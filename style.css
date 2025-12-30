@@ -1,0 +1,182 @@
+
+        /* CSS VARIABLES - Match your logo colors */
+        :root {
+            --dot-blue: #0077b6;
+            --dot-green: #4CAF50;
+            --dot-yellow: #FFC107;
+            --dot-red: #E91E63;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--dot-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--dot-blue);
+        }
+
+        .btn-quote {
+            background: var(--dot-red);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* HERO SECTION */
+        header {
+            height: 70vh;
+            background-image: url(images/WhatsApp\ Image\ 2025-12-28\ at\ 17.27.40.jpeg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-btns a {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .btn-primary { background: var(--dot-blue); color: white; }
+        .btn-secondary { background: var(--dot-green); color: white; }
+        .btn-whatsapp { background: #25D366; color: white; }
+
+        /* SERVICES SECTION */
+        .services-container {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .services-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-top: 8px solid var(--dot-blue);
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 2.5rem; margin-bottom: 20px; color: var(--dot-blue); }
+        
+        .card.green { border-color: var(--dot-green); }
+        .card.green i { color: var(--dot-green); }
+        .card.yellow { border-color: var(--dot-yellow); }
+        .card.yellow i { color: var(--dot-yellow); }
+        .card.red { border-color: var(--dot-red); }
+        .card.red i { color: var(--dot-red); }
+
+        /* CALL TO ACTION */
+        .cta {
+            background: var(--dot-blue);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta h2 { margin-bottom: 20px; font-size: 2rem; }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: #888;
+            padding: 50px 5%;
+            text-align: center;
+        }
+
+        .footer-logo { color: white; font-size: 1.5rem; margin-bottom: 20px; }
+        .socials { margin-bottom: 20px; }
+        .socials a { color: white; font-size: 1.5rem; margin: 0 10px; text-decoration: none; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            header h1 { font-size: 2.5rem; }
+            .hero-btns a { margin-bottom: 10px; width: 100%; }
+        }
